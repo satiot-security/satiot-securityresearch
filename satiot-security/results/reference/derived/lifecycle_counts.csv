@@ -1,0 +1,11 @@
+property,trials,true_count
+initial_join,200,200
+fresh_join,200,200
+sid_changed,200,200
+reinstall_preserves_replay,200,200
+pending_cancelled,200,200
+old_context_retired_locally,200,200
+new_message_accepted,200,200
+kms_revocation_blocks_join,200,200
+active_survives_kms_revocation,200,200
+explicit_as_revocation,200,200

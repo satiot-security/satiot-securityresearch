@@ -1,0 +1,3 @@
+mode,trials,accepted,sid_changed,key_changed,key_nonce_reused
+unsafe_resume,100,0,0,0,100
+safe_rejoin,100,100,100,100,0

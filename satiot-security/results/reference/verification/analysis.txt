@@ -1,0 +1,1 @@
+{"airtime": 90, "attack_matrix": 1400, "contact": 32, "integrated": 405, "lifecycle": 200, "network_impairments": 1500, "replay_window": 24, "state_rollback": 200}

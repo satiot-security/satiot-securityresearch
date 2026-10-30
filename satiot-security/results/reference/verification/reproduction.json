@@ -1,0 +1,41 @@
+{
+  "clean_raw_byte_equality": {
+    "integrated.csv": true,
+    "network_impairments.csv": true,
+    "replay_window.csv": true,
+    "lifecycle.csv": true,
+    "airtime.csv": true,
+    "contact.csv": true,
+    "state_rollback.csv": true,
+    "attack_matrix.csv": true
+  },
+  "clean_derived_byte_equality": {
+    "replay_counts.csv": true,
+    "integrated_sensitivity.csv": true,
+    "summary.json": true,
+    "contact_cases.csv": true,
+    "results.md": true,
+    "lifecycle_counts.csv": true,
+    "rollback_counts.csv": true,
+    "airtime_effects.csv": true,
+    "network_statistics.csv": true,
+    "adversarial_counts.csv": true
+  },
+  "png_pixel_equality": {
+    "airtime.png": true,
+    "contact.png": true,
+    "network.png": true
+  },
+  "supplied_csv_byte_preservation": {
+    "rekey_revocation.csv": true,
+    "contact_windows.csv": true,
+    "scalability.csv": true,
+    "network_impairments.csv": true,
+    "replay_window.csv": true,
+    "dos_validation.csv": true,
+    "airtime.csv": true,
+    "state_rollback.csv": true,
+    "attack_matrix.csv": true
+  },
+  "source_identity_match": true
+}

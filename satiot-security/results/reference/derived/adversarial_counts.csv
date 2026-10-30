@@ -1,0 +1,8 @@
+attack,trials,accepted,rejected,legitimate_controls
+ciphertext,200,0,200,200
+did,200,0,200,200
+duplicate,200,0,200,200
+mtype,200,0,200,200
+seq,200,0,200,200
+sid,200,0,200,200
+tag,200,0,200,200

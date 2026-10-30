@@ -1,0 +1,257 @@
+{
+  "commands": [
+    [
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "--junitxml",
+      "/workspace/scratch/c22b0e4d749d/satiot-security/results/reference/verification/tests.xml"
+    ],
+    [
+      "-m",
+      "experiments.adversarial"
+    ],
+    [
+      "-m",
+      "experiments.replay"
+    ],
+    [
+      "-m",
+      "experiments.rollback"
+    ],
+    [
+      "-m",
+      "experiments.lifecycle"
+    ],
+    [
+      "-m",
+      "experiments.airtime"
+    ],
+    [
+      "-m",
+      "experiments.network"
+    ],
+    [
+      "-m",
+      "experiments.contact"
+    ],
+    [
+      "-m",
+      "experiments.integrated"
+    ],
+    [
+      "-m",
+      "analysis.analyze",
+      "--raw",
+      "/workspace/scratch/c22b0e4d749d/satiot-security/results/reference/raw",
+      "--out",
+      "/workspace/scratch/c22b0e4d749d/satiot-security/results/reference/derived"
+    ]
+  ],
+  "configuration": {
+    "adversarial": {
+      "classes": [
+        "ciphertext",
+        "tag",
+        "seq",
+        "sid",
+        "did",
+        "mtype",
+        "duplicate"
+      ],
+      "trials_per_class": 200
+    },
+    "airtime": {
+      "bw_hz": 125000,
+      "capacities": [
+        51,
+        115,
+        222
+      ],
+      "cr": 1,
+      "crc": true,
+      "explicit_header": true,
+      "ldro": "auto: SF>=11 at BW125000",
+      "lower_layer_bytes": 13,
+      "overhead": 44,
+      "payloads": [
+        8,
+        32,
+        64,
+        96,
+        128
+      ],
+      "preamble": 8,
+      "spreading_factors": [
+        7,
+        9,
+        12
+      ]
+    },
+    "contact": {
+      "base_offsets_ms": [
+        0,
+        15,
+        20,
+        40,
+        60,
+        80,
+        100
+      ],
+      "boundary_offsets_from_close_ms": [
+        -20,
+        -19,
+        -10,
+        -1,
+        0
+      ],
+      "patterns_ms": [
+        [
+          60,
+          60
+        ],
+        [
+          30,
+          90
+        ],
+        [
+          90,
+          30
+        ]
+      ],
+      "traversal_ms": 10
+    },
+    "integrated": {
+      "fixed_traversal_budget_ms": 63,
+      "fragment_metadata_bytes": [
+        0,
+        2,
+        4
+      ],
+      "frame_loss": [
+        0,
+        0.05,
+        0.15
+      ]
+    },
+    "lifecycle": {
+      "trials": 200
+    },
+    "network": {
+      "profiles": [
+        [
+          "ideal",
+          21,
+          0,
+          0
+        ],
+        [
+          "moderate",
+          21,
+          5,
+          0.05
+        ],
+        [
+          "degraded",
+          21,
+          15,
+          0.15
+        ]
+      ],
+      "seed_offset": 7,
+      "trials_per_profile": 500
+    },
+    "replay": {
+      "delivery_order": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        2
+      ],
+      "windows": [
+        0,
+        8,
+        32,
+        64
+      ]
+    },
+    "rollback": {
+      "modes": [
+        "unsafe_resume",
+        "safe_rejoin"
+      ],
+      "restored_sequence": 2,
+      "trials_per_mode": 100
+    }
+  },
+  "cpu_count": 9,
+  "dependencies": {
+    "Pygments": "2.21.0",
+    "cffi": "2.1.1",
+    "contourpy": "1.3.3",
+    "cryptography": "46.0.4",
+    "cycler": "0.12.1",
+    "fonttools": "4.61.1",
+    "iniconfig": "2.3.1",
+    "kiwisolver": "1.4.9",
+    "matplotlib": "3.10.6",
+    "numpy": "2.3.5",
+    "packaging": "26.3",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "pluggy": "1.6.0",
+    "pycparser": "3.0",
+    "pyparsing": "3.3.2",
+    "pytest": "9.0.2",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0"
+  },
+  "evidence_type": "Execution of P1 implemented application-security profile source",
+  "finished_utc": "2026-10-30T16:14:59.335115+00:00",
+  "machine": "x86_64",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python": "3.12.14 (main, Oct 30 2026, 14:00:49) [Clang 22.1.3 ]",
+  "raw_sha256": {
+    "airtime.csv": "cedad8b0c4dc35413313716a408f12bb267d6c10dc78bf528d9c105a870becb1",
+    "attack_matrix.csv": "93365e88fbdf80cc3c434b1202c0ac5c12ebb9b8d6ff311895104cab20135b55",
+    "contact.csv": "b5fcd3eeb38495a05a7e030414927cf2560aedcf459b447eaaa2a76be626e6d1",
+    "integrated.csv": "48e89ba316fb6de3377c1a2c1294d5ef56eece0c0b61350903dedbf1b16a79e3",
+    "lifecycle.csv": "8f52b66a5d36124100c9a16e19eaefaf17e179d942219dfa4385289814ed4253",
+    "network_impairments.csv": "8c675a47cd2f86afe5dfcc2b40e2b0f3a1bf0a83d7cf7a9a2d81f40b160d179b",
+    "replay_window.csv": "0aea5e6e707d79c0bb2d7eccb1f225024be89f688d49e0d50b76af44a5de7f73",
+    "state_rollback.csv": "a217fecb044ab9c7f21d8feb0b3e99fafe52d88bec1ceb49ab23b5072a3581fc"
+  },
+  "source_files": {
+    "analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "analysis/analyze.py": "8ba499932af00b0f5b8487bda0aa6794892b52c4aa35c2d067aeb7be92969488",
+    "config/experiments.json": "479cea057795ea32e5e2c0d2ffe60901d42cd3c250923c9b6b2edadbc2a2bd9a",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/adversarial.py": "2c84d6a2e1664e46feaf1433395c51bae6c94bacb26e75611a43a22b9ccc4177",
+    "experiments/airtime.py": "f54a1469ad478c4d6e862d72809180c6c459ef6d06459ae9a44cc880b8065ef9",
+    "experiments/contact.py": "eed89a9d0b6e6b0e7ea29303d91ffe8784050b34c48df4160cafc45e81c274ad",
+    "experiments/integrated.py": "37602b08072c901fe4d8eeb83e07b6253d4870c5ac849053c500a409918295ed",
+    "experiments/lifecycle.py": "2a31823bdae5765dd72c7813f52b8ecfc469d497c9e363fe15690a6110a5dc8f",
+    "experiments/network.py": "d2160681319b179083ab8242a284ab731ed096b72128f0135f862c7021e95e82",
+    "experiments/replay.py": "93ced2707c5e4aa5fef52dd47c38b4622b70115c9b11d4441d0cf8a1c560b285",
+    "experiments/rollback.py": "4878728d85e2b5201a2f56ad2e83f860ff491143e02bb950058197695248e00d",
+    "experiments/settings.py": "cc93e0c65ce0a83dce907964bbfe47b80b3956b555b9b6eb3a4e29d73427a0c7",
+    "pytest.ini": "b160d82f7811555051f8966d8e02750a985227c1d022208c784e606946f2eada",
+    "requirements-lock.txt": "8c0a4fc37ec78f6862f4ee1ab4cdbafd4390cc72e0d9e27748ccf8e4103cc56f",
+    "requirements.txt": "d4c43dd09aaa16ed5ff192a8f6cc229a1ed11490d91484a708600b361a6e9b2d",
+    "run.py": "152488de51b80ffc5d3af88d3c36e6d377e629e50d203c44eee938937be778e6",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/core.py": "180f48fa066811cea24b15ae2ab220f402f8ca8a21cfea36501c5c58d67bd5cf",
+    "tests/test_analysis.py": "d6018b11149dfd862623becb4821828b529c448d3b2c279538a981f1acaad2e4",
+    "tests/test_establishment.py": "f14b5710ca046a7f40f9cc612c80081fdb99b5bcba75e97c4f4fc8b4143f0233",
+    "tests/test_replay.py": "e08b5ee1765ccbf8234fce5d3edd7452e6145792cb0a756f151e28871271d63d",
+    "tests/test_security.py": "c027de748a75398925afca9476077987f7130c11ea8faf2f4d6eef83432595e0"
+  },
+  "source_sha256": "821f6e161f2ea19e69ee542cba66b35c2914be567d6efa8b6c007c44503ea5c2",
+  "started_utc": "2026-10-30T16:14:56.700808+00:00",
+  "status": "completed"
+}
